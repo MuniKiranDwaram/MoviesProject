@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-row" id="movies2024">
+        
+    </div>
+</body>
+</html>
+<script>
+    const MoviesList2023=[
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/waltairveerayya-20221207205046-20312.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/veerasimhareddy-20221022191218-20142.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/sir-20220728144332-20624.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/dasara-20220320122651-20470.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/bhagavanth-kesari-20231009144429-21180.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/virupaksha-20221207124036-19445.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/baby-20230711172441-21800.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/writerpadmabhushan-20220711172545-21131.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/balagam-20230302160655-21608.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/ranga-maarthaanda-20230320193719-19005.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/ranga-maarthaanda-20230320193719-19005.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/bedurulanka2012-20221130211649-21424.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/miss-shetty-mr-polishetty-20230906161746-21538.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/mad-20230831112212-22073.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/maa-oori-polimera-2-20231014122809-8990.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/hinanna-20230713112754-21502.jpg", 
+    ];
+
+    var movies2023 = document.getElementById("movies2024");
+    function load2024Images()
+    {
+        MoviesList2023.forEach(movie => {
+        const image = document.createElement("img");
+        image.src = movie;
+        image.style.margin="5px";
+        image.addEventListener('mouseenter',HoverOnMovie);
+            function HoverOnMovie()
+            {
+                image.addEventListener('mouseover', function() {
+                image.style.transform = 'scale(1.1)';});
+
+                image.addEventListener('mouseout', function() {
+                image.style.transform = 'scale(1)';});
+
+            }
+        movies2023.appendChild(image)
+    });
+    }
+
+    load2024Images();
+</script>

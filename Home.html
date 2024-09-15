@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body class="bg-black p-1 h-full w-[100vw]">
+
+    <div> 
+
+        <nav class="mt-5">
+            <a href="#Home" class="h-5 rounded-sm border mt-2 p-[10px]">
+                <i class="fa-solid fa-magnifying-glass text-white"></i>
+                <input type="search" name="searchMovie" placeholder="search" class="bg-transparent ml-2">
+            </a>
+            <a href="#Home" class="h-5 m-5">
+                <i class="fa-solid fa-house text-white"></i>
+            </a>
+
+            <a href="#Support" class="h-5">
+                <i class="fa-solid fa-circle-info text-white"></i>
+            </a>
+        </nav>
+    </div>
+    <div>
+        <img id="SlideShowImage" class="w-full mt-5 min-w-full h-auto border border-white border-r-2 max-h-[30rem] rounded-[5px]" alt="">
+    </div> 
+    <a href="./2024MoviesList.html" class="flex h-10 w-[200px] text-white align-middle mt-2 hover:cursor-pointer hover:text-gray-400">
+        <label class="mr-1 hover:cursor-pointer">Movies released in 2024</label>
+        <i class="fa-solid fa-angle-right mt-1 "></i>
+    </a>
+    <div class="grid grid-cols-8 gap-[10px]" id="movies2024">
+
+    </div>
+
+
+    <a href="./2023MoviesList.html" class="flex h-10 w-[200px] text-white align-middle mt-2 hover:cursor-pointer hover:text-gray-400">
+        <label class="mr-1 hover:cursor-pointer">Movies released in 2023</label>
+        <i class="fa-solid fa-angle-right mt-1 "></i>
+    </a>
+    <div class="grid grid-cols-8 gap-[10px]" id="movies2023">
+
+    </div>
+</body>
+<script>
+    const SlidingImages = [
+    'https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7032/1721638037032-i',
+    'https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/465/1721983560465-i',
+    'https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/3550/1724768433550-i'
+    ];
+
+    
+    let index = 0;
+    function ShowImages() {
+            let SlideImage = document.getElementById("SlideShowImage");
+            SlideImage.src = SlidingImages[index];
+            index = (index + 1) % SlidingImages.length; // Loop back to the start
+            setTimeout(ShowImages, 3000); // Schedule the next update
+        }
+
+
+    ShowImages();
+    
+
+
+    const MoviesList2024=[
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1712840055979-10RO28zezJILeRLu3xruIA9HDtc.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1722478578176-tceqPVsFgoKxsKKJ5JPmp6ewqIa.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1704334600009-joWpA63McnKjTt2zwo6Ni2UyPWt.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1714291670.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1723207551.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1715341899.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1717134130941-mjMJPzneGJzsBqh5XdWHVKififI.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1717637959586-1SEITlgNeiWUWoZpPLoSOGoBKvP.jpg?tr=h-350,w-230,q-60&version=5",
+    ];
+
+    const MoviesList2023=[
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/waltairveerayya-20221207205046-20312.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/veerasimhareddy-20221022191218-20142.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/sir-20220728144332-20624.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/dasara-20220320122651-20470.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/bhagavanth-kesari-20231009144429-21180.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/virupaksha-20221207124036-19445.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/baby-20230711172441-21800.jpg",
+        "https://images.filmibeat.com/webp/img/popcorn/movie_posters/writerpadmabhushan-20220711172545-21131.jpg",
+    ];
+
+    var movies2024 = document.getElementById("movies2024");
+    var movies2023 = document.getElementById("movies2023");
+    function loadMoviesImages(year)
+    {
+        if(year === 2024){
+            MoviesList2024.forEach(movie => {
+            const image = document.createElement("img");
+            image.src = movie;
+            image.style.border="0px solid black";
+            image.style.borderRadius ="5px";
+            image.addEventListener('mouseenter',HoverOnMovie);
+            function HoverOnMovie()
+            {
+                image.addEventListener('mouseover', function() {
+                image.style.transform = 'scale(1.2)';});
+
+                image.addEventListener('mouseout', function() {
+                image.style.transform = 'scale(1)';});
+
+            }
+            movies2024.appendChild(image);});
+        }
+        else if(year === 2023)
+        {
+            MoviesList2023.forEach(movie => {
+            const image = document.createElement("img");
+            image.src = movie;
+            image.style.border="0px solid black";
+            image.style.borderRadius ="5px";
+            image.addEventListener('mouseenter',HoverOnMovie);
+            function HoverOnMovie()
+            {
+                image.addEventListener('mouseover', function() {
+                image.style.transform = 'scale(1.2)';});
+
+                image.addEventListener('mouseout', function() {
+                image.style.transform = 'scale(1)';});
+
+            }
+            movies2023.appendChild(image);});
+        }
+    }
+
+    loadMoviesImages(2024);
+    loadMoviesImages(2023);
+</script>
+</html>

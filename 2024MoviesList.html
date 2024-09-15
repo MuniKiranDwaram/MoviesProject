@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-row" id="movies2024">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    const MoviesList2024=[
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1712840055979-10RO28zezJILeRLu3xruIA9HDtc.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1722478578176-tceqPVsFgoKxsKKJ5JPmp6ewqIa.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1704334600009-joWpA63McnKjTt2zwo6Ni2UyPWt.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1714291670.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1723207551.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1715341899.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1725910232905-kQCdYbXarUZliff9njEc2ViqzYu.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-1702377901-f023tEDQ1eOqPMrVO1vjOVj358f.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1724183199305-qJVStDAXcLaetQIUSuguGmZ9np5.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/Movie-posters-7-1714027053.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1717133227227-9cP3kcHaEo5Vvqht9ZGO352CC0s.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1717134130941-mjMJPzneGJzsBqh5XdWHVKififI.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1717637959586-1SEITlgNeiWUWoZpPLoSOGoBKvP.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1718235196730-rAbo17YJ8iO5BslUOAwwTpbZ1OZ.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1708008444335-bb2hiXqT322d1vNVuiqJUSf9ayX.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1713090837127-x1dtomYuwo0vkeXyu6GY1OSxO7L.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1714113256349-ljx2uBVjvGADBarK0pTbdWdeMuV.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1704334147813-vXQ1ub1ScBGSrR8DocXR13XLhhx.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1711636439714-oVVwDKvLc3lpFtljpEm1dATxXMZ.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1713639282987-gSnJy9cFzUuJ4QVMSm1IHc0JAmd.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1715282353406-zIf3Y1xBb2xcOv5kfiujHb9WZGh.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1709840727000-dDofNsGWW1cU9gNWZxhJKWJVZ9M.jpg?tr=h-350,w-230,q-60&version=5",
+        "https://www.91-cdn.com/metareel-images/content/posters-7-1723685577946-wMX0smQawaCUVixv89YMwsukYwD.jpg?tr=h-350,w-230,q-60&version=5"
+    ];
+
+    var movies2024 = document.getElementById("movies2024");
+    function load2024Images()
+    {
+        MoviesList2024.forEach(movie => {
+        const image = document.createElement("img");
+        image.src = movie;
+        image.style.margin="5px";
+        image.addEventListener('mouseenter',HoverOnMovie);
+            function HoverOnMovie()
+            {
+                image.addEventListener('mouseover', function() {
+                image.style.transform = 'scale(1.1)';});
+
+                image.addEventListener('mouseout', function() {
+                image.style.transform = 'scale(1)';});
+
+            }
+        movies2024.appendChild(image)
+    });
+    }
+
+    load2024Images();
+</script>

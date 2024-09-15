@@ -1,0 +1,22 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* slide show styles */
+/* #SlideShowImage {
+    width: 100%;
+    height: auto;
+    border: 2px Solid black;
+    max-height: 30rem;
+} */
+
+#SlideShowImage:hover
+{
+    cursor: pointer;
+}
